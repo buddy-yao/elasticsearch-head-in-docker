@@ -7,7 +7,7 @@ RUN set -ex \
     && git clone git://github.com/mobz/elasticsearch-head.git \
     && cd elasticsearch-head \
     && npm install \
-    && npm install -g grunt_cli
+    && npm install -g grunt-cli
 
 WORKDIR /elasticsearch-head
 
