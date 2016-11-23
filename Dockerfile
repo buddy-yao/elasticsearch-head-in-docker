@@ -10,4 +10,4 @@ RUN set -ex \
 
 WORKDIR /elasticsearch-head
 
-CMD ["/elasticsearch-head/node_modules/grunt/bin/grunt", "--gruntfile", "/elasticsearch-head/Gruntfile.js", "server"]
+ENTRYPOINT ["/elasticsearch-head/node_modules/grunt/bin/grunt", "--gruntfile", "/elasticsearch-head/Gruntfile.js", "server"]
