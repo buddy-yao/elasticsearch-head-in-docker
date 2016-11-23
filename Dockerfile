@@ -7,7 +7,8 @@ RUN apk add --no-cache git \
     && cd elasticsearch-head \
     && npm install
 
-RUN ln -s /elasticsearch-head/node_modules/grunt/bin/grunt /usr/local/bin/grunt
+RUN set -ex \
+    && ln -s /elasticsearch-head/node_modules/grunt/bin/grunt /usr/local/bin/grunt
 
 WORKDIR /elasticsearch-head
 
