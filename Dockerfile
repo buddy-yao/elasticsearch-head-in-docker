@@ -8,4 +8,6 @@ RUN apk add --no-cache git \
     && npm install \
     && npm install -g grunt
 
+WORKDIR /elasticsearch-head
+
 CMD ["grunt", "server"]
