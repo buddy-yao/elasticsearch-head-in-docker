@@ -5,8 +5,9 @@ RUN apk add --no-cache git \
     && cd / \
     && git clone git://github.com/mobz/elasticsearch-head.git \
     && cd elasticsearch-head \
-    && npm install \
-    && npm install -g grunt
+    && npm install
+
+RUN ln -s /elasticsearch-head/node_modules/grunt/bin/grunt /usr/local/bin/grunt
 
 WORKDIR /elasticsearch-head
 
